@@ -108,6 +108,10 @@ function showBuildDetails(module, date_start, date_end) {
                 timeCell.innerText = moment(row.datetime).format('HH:mm')
                 buildRow.appendChild(timeCell)
 
+                var originCell = document.createElement('td')
+                originCell.innerText = row.origin
+                buildRow.appendChild(originCell)
+
                 var statusCell = document.createElement('td')
                 statusCell.innerText = row.status
                 statusCell.className = row.status
