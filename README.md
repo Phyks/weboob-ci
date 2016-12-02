@@ -82,7 +82,7 @@ curl http://SERVER/api/v1/modules/adecco/2016-11-20T05:00:00.000Z/2016-12-02T04:
 ### `POST /api/v1/modules`
 
 ```
-curl -X POST -H "Content-Type: application/json" --data "JSON_DATA" http://SERVER/api/v1/modules
+curl -H "Content-Type: application/json" --data "JSON_DATA" http://SERVER/api/v1/modules
 ```
 
 where `JSON_DATA` is a JSON object containing at least the following keys:
