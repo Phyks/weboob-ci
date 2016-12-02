@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Weboob modules CI</title>
+		<link rel="stylesheet" href="/static/vendor/normalize/normalize.min.css"/>
+		<link rel="stylesheet" href="/static/vendor/hint/hint.min.css"/>
+        <link rel="stylesheet" href="/static/vendor/cal-heatmap/cal-heatmap.css" />
+		<link rel="stylesheet" href="/static/css/style.css"/>
+	</head>
+	<body>
+        <main id="main"></main>
+
+        <template id="indexViewTemplate">
+            <h1>Weboob modules CI</h1>
+
+            <p class="loader">Loading...</p>
+        </template>
+
+        <template id="indexViewTableTemplate">
+            <table id="indexViewTable">
+                <thead>
+                    <tr>
+                        <th>Module</th>
+                        <th>Status</th>
+                        <th>Last update</th>
+                    </tr>
+                </thead>
+                <tbody id="modulesStatus">
+                </tbody>
+            </table>
+        </template>
+
+        <template id="moduleViewTemplate">
+            <h1 id="moduleTitle">Weboob module CI: </h1>
+
+            <div id="heatmap"></div>
+            <div class="heatmap-controls center">
+                <a href="#" id="heatmap-controls-previous" title="Past" aria-label="Move heatmap in the past">&lt;</a>
+                <a href="#" id="heatmap-controls-next" title="Next" aria-label="Move heatmap in the future">&gt;</a>
+            </div>
+
+            <div id="buildDetails">
+                <p class="center">Select a day above to get more details about the builds.</p>
+            </div>
+
+            <p class="center"><a href="/">Back to modules list</a></p>
+        </template>
+
+        <template id="buildDetailsTemplate">
+            <hr/>
+            <h2>DATE</h2>
+
+            <p class="loader">Loading...</p>
+        </template>
+
+        <template id="buildDetailsTableTemplate">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="buildDetailsTable">
+                </tbody>
+            </table>
+        </template>
+
+		<script type="text/javascript" src="/static/vendor/polyfills/promise.min.js"></script>
+		<script type="text/javascript" src="/static/vendor/polyfills/fetch.min.js"></script>
+		<script type="text/javascript" src="/static/vendor/moment/moment.min.js"></script>
+		<script type="text/javascript" src="/static/vendor/d3/d3.min.js"></script>
+        <script type="text/javascript" src="/static/vendor/cal-heatmap/cal-heatmap.min.js"></script>
+
+		<script type="text/javascript" src="/static/js/views/indexView.js"></script>
+		<script type="text/javascript" src="/static/js/views/moduleView.js"></script>
+
+		<script type="text/javascript" src="/static/js/main.js"></script>
+	</body>
+</html>

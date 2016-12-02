@@ -1,0 +1,7 @@
+# These are development settings, update if you run in production
+HOST = "localhost"  # IP to bind to (0.0.0.0 to listen to everything)
+PORT = 8080  # Port to bind to
+DEBUG = True
+
+DB_TYPE = "SqliteDatabase"  # A peewee supported db type
+DB_URI = "db.sqlite3"
