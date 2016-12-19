@@ -10,7 +10,7 @@ class ModuleStatus(peewee.Model):
     module = peewee.CharField(max_length=255)  # Module name
     origin = peewee.CharField(max_length=255)  # Origin of the update
     datetime = peewee.DateTimeField(
-        default=arrow.utcnow().replace(microsecond=0))
+        default=arrow.utcnow().replace(microsecond=0).datetime)
     is_good = peewee.BooleanField()  # True if good, False if bad
 
     class Meta:
