@@ -13,7 +13,7 @@ A web visualisation is available, built on top of this API.
 2. `pip install -r requirements.txt`
 3. Copy `config.py.example` to `config.py` and edit according to your needs.
 
-Then, you are ready to run `./server.py`.
+Then, you are ready to run `./weboob-ci/server.py`.
 
 
 ## API
