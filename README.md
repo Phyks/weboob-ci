@@ -1,7 +1,7 @@
 Weboob modules CI
 =================
 
-A small script exposin an API to store the status of
+A small script exposing an API to store the status of
 [Weboob](http://weboob.org) modules and track it over time.
 
 A web visualisation is available, built on top of this API.
