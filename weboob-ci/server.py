@@ -10,7 +10,7 @@ import sys
 import config
 import models
 
-from bottle import abort, get, post, request, run, static_file
+from bottle import abort, default_app, get, post, request, run, static_file
 
 
 @get("/")
@@ -114,6 +114,9 @@ def server_static(filepath):
     )
 
 
+# Init db
+models.init_db()
+
 if __name__ == "__main__":
     DEBUG = config.DEBUG
     if len(sys.argv) > 3:
@@ -130,7 +133,6 @@ if __name__ == "__main__":
         logger.setLevel(logging.DEBUG)
         logger.addHandler(logging.StreamHandler())
 
-    # Init db
-    models.init_db()
-
     run(host=HOST, port=PORT, debug=DEBUG)
+else:
+    app = application = default_app()
